@@ -8,10 +8,9 @@
 % heat tranf ceoff- kJ/(K hour m2)
 % volume - litres
 
-
 function M=PACfn(t,y)
 
-M=zeros(5,1);
+M=zeros(8,1);
 
 Tr=y(1);
 Tw =y(2);   
@@ -45,7 +44,7 @@ m = 1.28;
 
 Eaf = 4.1786e+04;
 Eab = Eaf-delH;
-R = 8.314e-3;
+R = 8.314e-0;
 
 kf = exp(13-Eaf/(R*(Tr*Trd)));
 kb = exp(4-1*Eab/(R*(Tr*Trd)));
@@ -64,8 +63,4 @@ M(6)= 0;
 M(7)= 0;
 M(8)= 0;
 
-% X(1)= -delH*V0*ca0*M(3);0
-% X(2)= -h*A*(Tr-Tw);
-% X(3)= -M(3)*S;
-% X
 end

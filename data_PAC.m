@@ -2,7 +2,7 @@ function m = data_PAC(x,cprev)
 
 if nargin<2
 m(1)= 0.1; %ca0
-m(2)= 0.3; %ch0
+m(2)= 0.1; %ch0
 m(3)= 0.001; %cp0
 m(4)= 0.001; %cw0
 else

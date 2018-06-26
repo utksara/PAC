@@ -6,7 +6,7 @@
 function M=PACfn(t,y)
 
 M=zeros(5,1);
-
+ 
 Tr=y(1);
 Tw =y(2);   
 x =y(3);
@@ -36,9 +36,9 @@ V0= 12.5*1000;
 mf= 70;%1.280;
 m = 100;% 1;
 
-Eaf = 4.1786e+04;
+Eaf = 4.1786e+3;
 Eab = Eaf-delH;
-R = 8.314;
+R = 8.314e-0;
 
 kf = exp(14-Eaf/(R*(Tr*Trd)));
 kb = exp(4-1*Eab/(R*(Tr*Trd)));
@@ -54,9 +54,7 @@ M(1)= Tr*(-delH*V0*ca0*M(3) - (Tr*Trd-Twd*Tw)*h*A - M(3)*S )/(Qr(Tr,x));
 M(4)= 0;
 M(5)= 0;
 
-
-% X(1)= -delH*V0*ca0*M(3);0
-% X(2)= -h*A*(Tr-Tw);
-% X(3)= -M(3)*S;
-% X
+X(1)= -delH*V0*ca0*M(3);
+X(2)= -h*A*(Tr-Tw);
+X(3)= -M(3)*S;
 end
